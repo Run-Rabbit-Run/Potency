@@ -1,0 +1,152 @@
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.flex-column {
+  min-width: 0;
+}
+
+.slider {
+  min-width: 0;
+
+  padding: 80px 50px;
+
+  background-image: url("../img/bcg-figure-up.png"), linear-gradient(to top, #eae9f2, #b9b9bf);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.slider__wrapper {
+  position: relative;
+
+  width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  background-color: rgb(223, 223, 255);
+}
+
+.slider__text {
+  position: sticky;
+  bottom: 6px;
+
+  width: 900px;
+  box-sizing: border-box;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #000000;
+  text-align: center;
+
+  @include reset-indents;
+  padding-left: 10px;
+  padding-top: 5px;
+
+  background-color: rgb(223, 223, 255);
+
+  z-index: 10;
+}
+
+.slider__image {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+}
+
+/* Кнопки назад и вперёд */
+.slick-arrow {
+  @include reset-indents;
+  position: absolute;
+  top: 50%;
+
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Кнопка назад */
+.slick-prev {
+  left: 40px;
+
+  background-image: url("../img/icons/icon-arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Кнопка вперёд */
+.slick-next {
+  right: 40px;
+
+  background-image: url("../img/icons/icon-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+// ---  Стили для Планшета  ---
+@media (max-width: $tablet-width) {
+  .slider__wrapper {
+    width: 84.6vw;
+  }
+
+  .slider {
+    padding-top: 50px;
+  }
+
+  .slider__text {
+    width: 84.6vw;
+  }
+}
+
+
+// ---  Стили для Мобильного экрана  ---
+@media (max-width: $mobile-width) {
+  .slider {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .slider__wrapper {
+    width: 84.6vw;
+    padding-bottom: 0;
+  }
+
+  .slider__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slider__text {
+    width: 100%;
+    max-width: 84.6vw;
+
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

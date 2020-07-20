@@ -1,0 +1,118 @@
+.head {
+  background-image: url("../img/bcg-figure-down.png"), linear-gradient(to top, #b9b9bf, #eae9f2);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.head__wrapper {
+  margin: 0 auto;
+  padding: 25px 40px;
+  max-width: 1366px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head__title {
+  @include reset-indents;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 90px;
+  color: #6e21e0;
+  text-align: center;
+
+  text-shadow: 0 0 5px $color-white;
+}
+
+.head__video-wrapper {
+  text-align: center;
+
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  overflow: hidden;
+}
+
+.head__button {
+  @include reset-indents;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 2px $color-black;
+  text-align: center;
+
+  display: inline-block;
+  width: 900px;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  margin-top: 10px;
+  border-radius: 35px;
+
+
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+
+  &:hover {
+    background-position: right center;
+  }
+}
+
+
+// ---  Стили для Планшета  ---
+@media (max-width: $tablet-width) {
+  .head__video {
+    width: 100%;
+    height: auto;
+  }
+
+  .head__video-wrapper {
+    width: auto;
+    height: 100%;
+  }
+
+  .head__button {
+    width: calc(100% - 60px);
+  }
+}
+
+
+// ---  Стили для Мобильного экрана  ---
+@media (max-width: $mobile-width) {
+  .head__wrapper {
+    padding: 15px;
+  }
+
+  .head__video {
+    width: 100%;
+    height: auto;
+  }
+
+  .head__video-wrapper {
+    margin-top: 5px;
+
+    width: auto;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 0;
+  }
+
+  .head__button {
+    width: calc(100% - 20px);
+  }
+
+  .head__title {
+    font-size: 45px;
+    line-height: 65px;
+  }
+}
