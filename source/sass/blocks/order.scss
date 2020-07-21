@@ -1,0 +1,350 @@
+.order {
+  padding: 80px 50px 40px 50px;
+
+  max-width: 1366px;
+}
+
+.order__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.order__good {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  max-width: 640px;
+  width: 50%;
+  padding: 25px;
+  box-sizing: border-box;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+
+  border-radius: 25px;
+}
+
+.order__image  {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order__image img {
+  width: 100%;
+  height: auto;
+}
+
+.order__prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+.order__price {
+  @include reset-indents;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 120px;
+  text-align: center;
+
+  border: 3px solid $color-yellow;
+  border-radius: 25px;
+
+  padding: 0 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 0 rgba(249, 231, 1, 0.5);
+
+  position: relative;
+
+  &--past {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 70px;
+    color: rgba(1, 28, 64, 0.6);
+
+    border: none;
+    box-shadow: none;
+  }
+
+  &--past::before {
+    position: absolute;
+    top: calc(50% - 2px);
+    left: calc(50% - 55px);
+    content: "";
+
+    width: 110px;
+    height: 4px;
+    border-radius: 2px;
+
+    transform: rotate(-15deg);
+
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+}
+
+.order__text {
+  @include reset-indents;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+
+  width: 100%;
+  margin-top: 20px;
+
+  text-shadow: 0 0 2px $color-white;
+}
+
+.order__form-wrapper {
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order__input {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 0;
+
+  width: 100%;
+  padding: 16px 28px;
+  margin-bottom: 70px;
+  box-sizing: border-box;
+
+  outline: none;
+  border: none;
+  border-radius: 35px;
+
+  background-color: $color-white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+
+  &:focus {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  &::placeholder {
+    color: rgba(1, 28, 64, 0.4);
+  }
+}
+
+.order__label {
+  position: absolute;
+  top: 0;
+  left: 20px;
+
+  display: inline-block;
+  padding: 2px 7px;
+
+  border-radius: 15px;
+
+  background-color: $color-yellow;
+  background-image: linear-gradient(to bottom, $color-yellow 0%, $color-white 85%);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+
+  cursor: text;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.order__input:focus + .order__label {
+  opacity: 1;
+  top: -10px;
+  cursor: default;
+}
+
+.order__name-wrapper {
+  position: relative;
+}
+
+.order__tel-wrapper {
+  position: relative;
+}
+
+.order__submit {
+  border: none;
+
+  padding: 10px 0 8px 0;
+}
+
+.order__timer {
+  width: 100%;
+  margin-bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order__timer-text {
+  @include reset-indents;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+
+  width: 500px;
+  margin-bottom: 25px;
+  padding: 15px;
+
+  border-radius: 35px;
+
+  background-color: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 10px 1px rgba(255, 0, 0, 0.7);
+  text-shadow: 0 0 2px $color-white;
+}
+
+
+// ---  Стили для Планшета  ---
+@media (max-width: $tablet-width) {
+  .order {
+    padding: 60px 40px 30px 40px;
+  }
+
+  .order__good {
+    margin-right: 0;
+  }
+
+  .order__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .order__price {
+    font-size: 50px;
+    line-height: 70px;
+
+    padding: 8px;
+
+    &--past {
+      font-size: 30px;
+      line-height: 60px;
+    }
+
+    &--past::before {
+      left: calc(50% - 50px);
+
+      width: 100px;
+    }
+  }
+}
+
+
+// ---  Стили для Мобильного экрана  ---
+@media (max-width: $mobile-width) {
+  .order__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order__timer-text {
+    width: 75%;
+
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .order__timer {
+    margin-bottom: 25px;
+  }
+
+  .order {
+    padding: 40px 10px 20px 10px;
+  }
+
+  .order__good {
+    width: auto;
+    padding: 18px;
+  }
+
+  .order__form-wrapper {
+    min-width: 300px;
+    width: 65%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .order__input {
+    margin-bottom: 20px;
+  }
+
+  .order__price {
+    padding: 6px;
+
+    &--past {
+      line-height: 40px;
+    }
+  }
+
+  .order__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+
+
+// ---  Стили для ТАЙМЕРА на Мобильном экране  ---
+@media (max-width: $mobile-width) {
+  #timer4b010f14fff16a74387ece2996151a03 {
+    min-width: 280px !important;
+    margin: 0 20px !important;
+    height: 57px !important;
+    box-sizing: border-box !important;
+  }
+
+  #timer-canvas-4b010f14fff16a74387ece2996151a03-hours,
+  #timer-canvas-4b010f14fff16a74387ece2996151a03-minutes,
+  #timer-canvas-4b010f14fff16a74387ece2996151a03-secundes {
+    width: 57px !important;
+    height: 57px !important;
+  }
+
+  #timer-number-4b010f14fff16a74387ece2996151a03-hours,
+  #timer-number-4b010f14fff16a74387ece2996151a03-minutes,
+  #timer-number-4b010f14fff16a74387ece2996151a03-secundes {
+    font-size: 25px !important;
+  }
+
+  #timer-element-4b010f14fff16a74387ece2996151a03-hours,
+  #timer-element-4b010f14fff16a74387ece2996151a03-minutes,
+  #timer-element-4b010f14fff16a74387ece2996151a03-secundes {
+    vertical-align: baseline  !important;
+    padding: 15px 0 0 0 !important;
+    height: 57px !important;
+  }
+
+  .timer-separator {
+    padding: 0 !important;
+    height: 57px !important;
+  }
+
+  .timer-element {
+    width: 57px !important;
+    height: 57px !important;
+  }
+}

@@ -6,6 +6,8 @@
 
 .slick-list {
   overflow: hidden;
+
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .flex-column {
@@ -17,7 +19,8 @@
 
   padding: 80px 50px;
 
-  background-image: url("../img/bcg-figure-up.png"), linear-gradient(to top, #eae9f2, #b9b9bf);
+  background-color: $color-white;
+  background-image: linear-gradient(to top, $color-white, $color-violet);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -74,10 +77,25 @@
 
   font-size: 0;
   border: 0;
+  border-radius: 50%;
   background-color: transparent;
 
   z-index: 2;
   cursor: pointer;
+
+  outline: none;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    border: 2px solid $color-yellow;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 /* Кнопка назад */
@@ -108,7 +126,7 @@
   }
 
   .slider {
-    padding-top: 50px;
+    padding: 50px 40px;
   }
 
   .slider__text {

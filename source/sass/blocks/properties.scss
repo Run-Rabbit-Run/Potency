@@ -1,5 +1,8 @@
 .properties {
-  padding: 20px 50px;
+  padding: 80px 50px;
+
+  background-color: $color-violet;
+  background-image: linear-gradient(to top, $color-violet, $color-white);
 }
 
 .properties__list {
@@ -17,6 +20,14 @@
 .properties__item {
   width: 300px;
   margin-right: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  border: 2px solid $color-yellow;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+
+  background-color: rgba(249, 231, 1, 0.3);
 
   &:last-child {
     margin-right: 0;
@@ -34,9 +45,9 @@
   display: inline-block;
   min-height: 50px;
 
-  padding-left: 55px;
+  padding-left: 65px;
   padding-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   box-sizing: border-box;
 
   &::before {
@@ -69,8 +80,57 @@
 .properties__item p {
   @include reset-indents;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 24px;
 
-  padding-left: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+// ---  Стили для Планшета  ---
+@media (max-width: $tablet-width) {
+  .properties__item {
+    min-width: 200px;
+  }
+
+  .properties__list {
+    justify-content: space-around;
+  }
+
+  .properties {
+    padding: 50px 40px 60px 40px;
+  }
+}
+
+
+// ---  Стили для Мобильного экрана  ---
+@media (max-width: $mobile-width) {
+  .properties__list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .properties__item {
+    margin: 0 0 35px 0;
+    width: 80%;
+  }
+
+  .properties {
+    padding-bottom: 40px;
+  }
+
+  .properties__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .properties p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    padding-left: 6px;
+  }
 }
