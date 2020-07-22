@@ -45,7 +45,7 @@
   font-size: 14px;
   line-height: 20px;
   color: #011c40;
-  background-color: #A668D5; }
+  background-color: #a668d5; }
 
 .button {
   margin: 0;
@@ -84,9 +84,9 @@
             box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.8); }
 
 .head {
-  background-color: #A668D5;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#A668D5), to(#f9fbfd));
-  background-image: linear-gradient(to top, #A668D5, #f9fbfd);
+  background-color: #a668d5;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a668d5), to(#f9fbfd));
+  background-image: linear-gradient(to top, #a668d5, #f9fbfd);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain; }
@@ -115,8 +115,9 @@
   color: #011c40;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 5px;
   margin-bottom: 10px;
-  text-shadow: 0 0 2px #A668D5; }
+  text-shadow: 0 0 2px #a668d5; }
 
 .head__video-wrapper {
   text-align: center;
@@ -180,8 +181,8 @@
   min-width: 0;
   padding: 80px 50px;
   background-color: #f9fbfd;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#f9fbfd), to(#A668D5));
-  background-image: linear-gradient(to top, #f9fbfd, #A668D5);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f9fbfd), to(#a668d5));
+  background-image: linear-gradient(to top, #f9fbfd, #a668d5);
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain; }
@@ -287,9 +288,9 @@
 
 .properties {
   padding: 80px 50px;
-  background-color: #A668D5;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#A668D5), to(#f9fbfd));
-  background-image: linear-gradient(to top, #A668D5, #f9fbfd); }
+  background-color: #a668d5;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a668d5), to(#f9fbfd));
+  background-image: linear-gradient(to top, #a668d5, #f9fbfd); }
 
 .properties__list {
   margin: 0;
@@ -399,6 +400,7 @@
 
 .order {
   padding: 80px 50px 40px 50px;
+  margin: 0 auto;
   max-width: 1366px; }
 
 .order__wrapper {
@@ -707,7 +709,7 @@
   #timer-element-4b010f14fff16a74387ece2996151a03-hours,
   #timer-element-4b010f14fff16a74387ece2996151a03-minutes,
   #timer-element-4b010f14fff16a74387ece2996151a03-secundes {
-    vertical-align: baseline  !important;
+    vertical-align: baseline !important;
     padding: 15px 0 0 0 !important;
     height: 57px !important; }
   .timer-separator {

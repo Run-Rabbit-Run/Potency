@@ -1,5 +1,6 @@
 .order {
   padding: 80px 50px 40px 50px;
+  margin: 0 auto;
 
   max-width: 1366px;
 }
@@ -27,7 +28,7 @@
   border-radius: 25px;
 }
 
-.order__image  {
+.order__image {
   width: 50%;
 
   display: flex;
@@ -307,7 +308,6 @@
 }
 
 
-
 // ---  Стили для ТАЙМЕРА на Мобильном экране  ---
 @media (max-width: $mobile-width) {
   #timer4b010f14fff16a74387ece2996151a03 {
@@ -333,7 +333,7 @@
   #timer-element-4b010f14fff16a74387ece2996151a03-hours,
   #timer-element-4b010f14fff16a74387ece2996151a03-minutes,
   #timer-element-4b010f14fff16a74387ece2996151a03-secundes {
-    vertical-align: baseline  !important;
+    vertical-align: baseline !important;
     padding: 15px 0 0 0 !important;
     height: 57px !important;
   }
