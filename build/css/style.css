@@ -155,7 +155,8 @@
     width: calc(100% - 20px); }
   .head__title {
     font-size: 45px;
-    line-height: 65px; } }
+    line-height: 65px;
+    letter-spacing: 0; } }
 
 .slick-track {
   display: -webkit-box;
